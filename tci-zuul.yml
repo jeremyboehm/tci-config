@@ -1,0 +1,29 @@
+configuration:  
+  projectName: tci-zuul
+
+server:
+  port: 8001
+
+zuul:
+  ignored-services: "*"
+  routes:
+    slackbot-polls:
+      path: /polls/**
+      serviceId: popoll-slackbot
+      stripPrefix: false
+    survey:
+      path: /surveys/**
+      serviceId: popoll-survey
+      stripPrefix: false
+
+eureka:
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  server:
+    enabled: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+    registerWithEureka: true

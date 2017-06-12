@@ -7,13 +7,17 @@ server:
 zuul:
   ignored-services: "*"
   routes:
-    slackbot-polls:
-      path: /polls/**
-      serviceId: popoll-slackbot
+    webhook:
+      path: /webhook/**
+      serviceId: tci-webhook
       stripPrefix: false
-    survey:
-      path: /surveys/**
-      serviceId: popoll-survey
+    projects:
+      path: /projects/**
+      serviceId: tci-projects
+      stripPrefix: false
+    commands:
+      path: /commands/**
+      serviceId: tci-commands
       stripPrefix: false
 
 eureka:

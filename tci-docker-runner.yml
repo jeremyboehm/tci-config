@@ -15,3 +15,13 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/
     registerWithEureka: true
+
+info:
+  docker:
+    windows:
+      uri: https://192.168.99.100:2376
+      cert: "C:\\Users\\Julien\\.docker\\machine\\certs"
+    unix:
+      uri: http://localhost:2375
+    projectsRootFolderInHost: /tmp/travel-ci
+    projectFolderInContainer: /app

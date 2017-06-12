@@ -4,6 +4,10 @@ configuration:
 server:
   port: 0
 
+management:
+  security:
+    enabled: false
+
 eureka:
   instance:
     metadataMap:

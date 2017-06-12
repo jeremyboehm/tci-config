@@ -4,6 +4,10 @@ configuration:
 server:
   port: 8000
 
+management:
+  security:
+    enabled: false
+
 eureka:
   instance:
     hostname: localhost

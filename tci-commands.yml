@@ -23,3 +23,12 @@ eureka:
 info:
   services:
     docker-runner: "http://tci-docker-runner"
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/travelci
+    username: tcicommands
+    password: tcicommands
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

@@ -10,6 +10,9 @@ management:
 
 zuul:
   ignored-services: "*"
+  host:
+    connect-timeout-millis: 60000
+    socket-timeout-millis: 60000
   routes:
     webhook:
       path: /webhook/**

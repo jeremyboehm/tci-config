@@ -27,5 +27,4 @@ info:
       cert: "C:\\Users\\Julien\\.docker\\machine\\certs"
     unix:
       uri: http://localhost:2375
-    projectsRootFolderInHost: /tmp/travel-ci
     projectFolderInContainer: /app

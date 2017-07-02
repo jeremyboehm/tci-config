@@ -27,6 +27,14 @@ zuul:
       serviceId: tci-commands
       stripPrefix: false
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
 eureka:
   instance:
     metadataMap:

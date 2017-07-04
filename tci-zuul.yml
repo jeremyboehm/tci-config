@@ -3,6 +3,7 @@ configuration:
 
 server:
   port: 8001
+  contextPath: /api
 
 management:
   security:
